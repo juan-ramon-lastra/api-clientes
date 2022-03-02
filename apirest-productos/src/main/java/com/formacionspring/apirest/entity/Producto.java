@@ -35,6 +35,8 @@ public class Producto implements Serializable {
 	
 	private String descripcion;
 	
+	private String imagen;
+	
 	@PrePersist
 	public void prePersist() {
 		if (fecha_ingreso == null) {
@@ -93,6 +95,16 @@ public class Producto implements Serializable {
 		this.descripcion = descripcion;
 	}
 	
+	public String getImagen() {
+		return imagen;
+	}
+
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
+	}
+
+
+
 	/** */
 	private static final long serialVersionUID = 1L;
 }
